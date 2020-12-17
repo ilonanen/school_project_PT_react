@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/ilonanen/school_project_PT_react/static/css/main.ab7136cd.chunk.css",
+    "main.js": "/ilonanen/school_project_PT_react/static/js/main.2e1d96ce.chunk.js",
+    "main.js.map": "/ilonanen/school_project_PT_react/static/js/main.2e1d96ce.chunk.js.map",
+    "runtime-main.js": "/ilonanen/school_project_PT_react/static/js/runtime-main.5665a008.js",
+    "runtime-main.js.map": "/ilonanen/school_project_PT_react/static/js/runtime-main.5665a008.js.map",
+    "static/css/2.e134e6d2.chunk.css": "/ilonanen/school_project_PT_react/static/css/2.e134e6d2.chunk.css",
+    "static/js/2.5be8dbf7.chunk.js": "/ilonanen/school_project_PT_react/static/js/2.5be8dbf7.chunk.js",
+    "static/js/2.5be8dbf7.chunk.js.map": "/ilonanen/school_project_PT_react/static/js/2.5be8dbf7.chunk.js.map",
+    "static/js/3.5d1da602.chunk.js": "/ilonanen/school_project_PT_react/static/js/3.5d1da602.chunk.js",
+    "static/js/3.5d1da602.chunk.js.map": "/ilonanen/school_project_PT_react/static/js/3.5d1da602.chunk.js.map",
+    "index.html": "/ilonanen/school_project_PT_react/index.html",
+    "static/css/2.e134e6d2.chunk.css.map": "/ilonanen/school_project_PT_react/static/css/2.e134e6d2.chunk.css.map",
+    "static/css/main.ab7136cd.chunk.css.map": "/ilonanen/school_project_PT_react/static/css/main.ab7136cd.chunk.css.map",
+    "static/js/2.5be8dbf7.chunk.js.LICENSE.txt": "/ilonanen/school_project_PT_react/static/js/2.5be8dbf7.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.5665a008.js",
+    "static/css/2.e134e6d2.chunk.css",
+    "static/js/2.5be8dbf7.chunk.js",
+    "static/css/main.ab7136cd.chunk.css",
+    "static/js/main.2e1d96ce.chunk.js"
+  ]
+}
