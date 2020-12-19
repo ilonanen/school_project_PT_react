@@ -12,8 +12,7 @@ import { Dialog, DialogActions, DialogTitle, DialogContent, Button } from '@mate
 
 function Calendar() {
     const [trainings, setTrainings] = useState([])
-    // const [events, setEvents] = useState([])
-    
+        
     useEffect(() => {
         getTrainings()        
     }, [])
@@ -49,7 +48,6 @@ function Calendar() {
     };
   
     const handleClose = () => {
-      // setAnchorEl(null)
       setOpen(false)
     };
   

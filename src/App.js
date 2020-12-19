@@ -11,6 +11,7 @@ import PropTypes from 'prop-types'
 import Customers from './components/customers'
 import Trainings from './components/trainings'
 import Calendar from './components/Calendar'
+import Charts from './components/Charts'
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -53,13 +54,15 @@ function App() {
             <Tab label = "Calendar" to = "/calendar" component = {Link} />
             <Tab label = "Customers" to = "/customers" component = {Link} />
             <Tab label = "Trainings" to = "/trainings" component = {Link} />
+            <Tab label = "Charts" to = "/charts" component = {Link} />
           </Tabs>
         </AppBar>
         <Switch>
-          <Route exact path = "/" component = {Calendar}></Route>
+          <Route exact path = "/school_project_PT_react" component = {Calendar}></Route>
           <Route path = "/calendar" component = {Calendar} />
           <Route path = "/customers" component = {Customers} />
           <Route path = "/trainings" component = {Trainings} />
+          <Route path = "/charts" component = {Charts} />
         </Switch>
       </div>
     </BrowserRouter>

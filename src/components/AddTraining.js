@@ -106,7 +106,9 @@ function AddTraining(props) {
                     >
                     <MenuItem value='15'>15 min</MenuItem>
                     <MenuItem value='30'>30 min</MenuItem>
+                    <MenuItem value='45'>45 min</MenuItem>
                     <MenuItem value='60'>1 hour</MenuItem>
+                    <MenuItem value='75'>75 min</MenuItem>
                     <MenuItem value='90'>1,5 hours</MenuItem>
                     <MenuItem value='120'>2 hours</MenuItem>
                 </TextField>
