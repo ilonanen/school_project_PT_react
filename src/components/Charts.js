@@ -29,7 +29,7 @@ function Charts() {
     return (
         <div style = {{margin: 'auto'}}>
            <BarChart
-                width = {800}
+                width = {activities.length * 100}
                 height = {600}
                 data = {activities}
                 margin = {10}
