@@ -25,7 +25,6 @@ function Charts() {
         }
     })
 
-    console.log(activities)
 
     const groups = groupBy(activities, 'activity')
     console.log(groups)
