@@ -1,11 +1,11 @@
 import React from 'react'
-import { useState, useEffect } from 'react'
-import { groupBy, sumBy, map, Object, Array } from 'lodash'
+import { useState, useEffect, useMemo } from 'react'
+import { groupBy, sumBy, map } from 'lodash'
+import { BarChart, XAxis, YAxis, CartesianGrid, Bar, Tooltip } from 'recharts'
 
 
 function Charts() {
     const [trainings, setTrainings] = useState([])
-    // const [activities, setActivities] = useState([])
     
     useEffect(() => {
         getTrainings()
@@ -17,21 +17,31 @@ function Charts() {
         .then (data => setTrainings(data))
         .catch (err => console.error(err))
     }
-        
 
+    const activities = useMemo(() => map(groupBy(trainings, 'activity'), (value, key) => ({
+        activity: key, minutes: sumBy(value, 'duration')
+    })), [trainings]
+    )
     
-    var activities = groupBy(trainings, 'activity')
     console.log(activities)
 
-    var sums = map(activities, (value, key) => ({
-        activity: key, totalamount: sumBy(value, 'duration')
-    }))
     
-    console.log(sums)
-
     return (
-        <div>
-           
+        <div style = {{margin: 'auto'}}>
+           <BarChart
+                width = {800}
+                height = {600}
+                data = {activities}
+                margin = {10}
+            >
+                <XAxis dataKey="activity" />
+                <YAxis dataKey="minutes" />
+                <Tooltip />
+                <CartesianGrid stroke="#f5f5f5" strokeDasharray = '2 2' />
+                
+                <Bar dataKey="minutes" fill="#5555FF" />
+
+            </BarChart>
         </div>
     )
 
