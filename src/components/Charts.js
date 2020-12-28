@@ -1,11 +1,11 @@
 import React from 'react'
 import { useState, useEffect } from 'react'
-import { groupBy, sumBy, Object, Array } from 'lodash'
+import { groupBy, sumBy, map, Object, Array } from 'lodash'
 
 
 function Charts() {
     const [trainings, setTrainings] = useState([])
- 
+    // const [activities, setActivities] = useState([])
     
     useEffect(() => {
         getTrainings()
@@ -14,21 +14,20 @@ function Charts() {
     const getTrainings = () => {
         fetch('https://customerrest.herokuapp.com/gettrainings')
         .then (response => response.json())
-        .then(data => setTrainings(data))
-        .catch(err => console.error(err))
+        .then (data => setTrainings(data))
+        .catch (err => console.error(err))
     }
+        
 
-    const activities = trainings.map(training => {
-        return {
-            activity: training.activity,
-            duration: training.duration
-        }
-    })
+    
+    var activities = groupBy(trainings, 'activity')
+    console.log(activities)
 
-
-    const groups = groupBy(activities, 'activity')
-    console.log(groups)
-
+    var sums = map(activities, (value, key) => ({
+        activity: key, totalamount: sumBy(value, 'duration')
+    }))
+    
+    console.log(sums)
 
     return (
         <div>
