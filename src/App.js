@@ -54,7 +54,7 @@ function App() {
             <Tab label = "Calendar" to = "/calendar" component = {Link} />
             <Tab label = "Customers" to = "/customers" component = {Link} />
             <Tab label = "Trainings" to = "/trainings" component = {Link} />
-            <Tab label = "Charts" to = "/charts" component = {Link} />
+            <Tab label = "Statistics" to = "/stats" component = {Link} />
           </Tabs>
         </AppBar>
         <Switch>
@@ -62,7 +62,7 @@ function App() {
           <Route path = "/calendar" component = {Calendar} />
           <Route path = "/customers" component = {Customers} />
           <Route path = "/trainings" component = {Trainings} />
-          <Route path = "/charts" component = {Charts} />
+          <Route path = "/stats" component = {Charts} />
         </Switch>
       </div>
     </BrowserRouter>
