@@ -79,19 +79,6 @@ function Customers() {
     }
 
     const columns = [
-        {headerName: 'Last name', field: 'lastname', width: 160, sortable: true, sort: 'asc', filter: true, suppressSizeToFit: false},
-        {headerName: 'First Name', field: 'firstname', width: 160, sortable: true, filter: true, suppressSizeToFit: false},
-        {headerName: 'Address', field: 'streetaddress', sortable: true, filter: true, suppressSizeToFit: false},
-        {field: 'postcode', width: 160, sortable: true, filter: true, suppressSizeToFit: false},
-        {field: 'city', width: 160, sortable: true, filter: true, suppressSizeToFit: false},
-        {field: 'email', sortable: true, filter: true, suppressSizeToFit: false},
-        {field: 'phone', sortable: true, filter: true, suppressSizeToFit: false},
-        {
-            headerName: '',
-            field: 'data',
-            width: 60,
-            cellRendererFramework: params => <ShowTrainings params = {params} />
-        },
         {
             headerName: '',
             field: 'data',
@@ -109,18 +96,31 @@ function Customers() {
             field: 'links',
             width: 60,
             cellRendererFramework: params =>
-                <Tooltip title = 'Delete customer'>
+            <Tooltip title = 'Delete customer'>
                     <IconButton color = 'secondary' onClick = {() => deleteCustomer(params)}>
                         <DeleteOutlinedIcon />
                     </IconButton>
                 </Tooltip>
-        }
+        },
+        {
+            headerName: '',
+            field: 'data',
+            width: 60,
+            cellRendererFramework: params => <ShowTrainings params = {params} />
+        },
+        {headerName: 'Last name', field: 'lastname', width: 160, sortable: true, sort: 'asc', filter: true, suppressSizeToFit: false},
+        {headerName: 'First Name', field: 'firstname', width: 160, sortable: true, filter: true, suppressSizeToFit: false},
+        {field: 'email', sortable: true, filter: true, suppressSizeToFit: false},
+        {field: 'phone', sortable: true, filter: true, suppressSizeToFit: false},
+        {headerName: 'Address', field: 'streetaddress', sortable: true, filter: true, suppressSizeToFit: false},
+        {headerName: 'Zip', field: 'postcode', width: 120, sortable: true, filter: true, suppressSizeToFit: false},
+        {field: 'city', width: 120, sortable: true, filter: true, suppressSizeToFit: false}
     ]
 
     return (
         <div>
             <h1>Customers</h1>
-            <div className = 'ag-theme-material' style = {{height: 640, width: '95%', margin: 'auto'}}>
+            <div className = 'ag-theme-material' style = {{height: 600, width: '95%', margin: 'auto'}}>
                 <AgGridReact
                     rowData = {customers}
                     columnDefs = {columns}

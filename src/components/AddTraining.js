@@ -88,7 +88,8 @@ function AddTraining(props) {
                 >
                     <MenuItem value="Gym training">Gym Training</MenuItem>
                     <MenuItem value="Running">Running</MenuItem>
-                    <MenuItem value="Indoor cycling">Indoor cycling</MenuItem>
+                    <MenuItem value="Spinning">Spinning</MenuItem>
+                    <MenuItem value="Cycling">Cycling</MenuItem>
                     <MenuItem value="Walking">Walking</MenuItem>
                     <MenuItem value="Swimming">Swimming</MenuItem>
                     <MenuItem value="Cardio">Cardio</MenuItem>
